@@ -13,6 +13,8 @@
 		2540C2EC19C195CC0058D41F /* IHRJiraTicketCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2540C2EB19C195CC0058D41F /* IHRJiraTicketCollectionViewController.m */; };
 		2540C2EF19C19DD10058D41F /* IHRTicketCollectionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2540C2EE19C19DD10058D41F /* IHRTicketCollectionTableViewCell.m */; };
 		2540C2F219C1A1B50058D41F /* IHRTicketDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2540C2F119C1A1B50058D41F /* IHRTicketDetailViewController.m */; };
+		25DD95A919C1B7AE006D42D4 /* iPadStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25DD95A719C1B7AE006D42D4 /* iPadStoryboard.storyboard */; };
+		25DD95AC19C1BF69006D42D4 /* ReadMe.md in Resources */ = {isa = PBXBuildFile; fileRef = 25DD95AB19C1BF69006D42D4 /* ReadMe.md */; };
 		DB48BDC519A7C78F00810B50 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB48BDC419A7C78F00810B50 /* Foundation.framework */; };
 		DB48BDC719A7C78F00810B50 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB48BDC619A7C78F00810B50 /* CoreGraphics.framework */; };
 		DB48BDC919A7C78F00810B50 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB48BDC819A7C78F00810B50 /* UIKit.framework */; };
@@ -48,6 +50,8 @@
 		2540C2EE19C19DD10058D41F /* IHRTicketCollectionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IHRTicketCollectionTableViewCell.m; sourceTree = "<group>"; };
 		2540C2F019C1A1B50058D41F /* IHRTicketDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IHRTicketDetailViewController.h; sourceTree = "<group>"; };
 		2540C2F119C1A1B50058D41F /* IHRTicketDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IHRTicketDetailViewController.m; sourceTree = "<group>"; };
+		25DD95A819C1B7AE006D42D4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/iPadStoryboard.storyboard; sourceTree = "<group>"; };
+		25DD95AB19C1BF69006D42D4 /* ReadMe.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.md; sourceTree = "<group>"; };
 		DB48BDC119A7C78F00810B50 /* SimpleTicket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleTicket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB48BDC419A7C78F00810B50 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DB48BDC619A7C78F00810B50 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -127,9 +131,11 @@
 				DB48BDD419A7C78F00810B50 /* IHRAppDelegate.m */,
 				2540C2E219C14C7B0058D41F /* IHRTicketURLS.h */,
 				2540C2E319C14C7B0058D41F /* IHRTicketURLS.m */,
+				25DD95AB19C1BF69006D42D4 /* ReadMe.md */,
 				DB48BDD619A7C78F00810B50 /* Images.xcassets */,
 				DB48BDCB19A7C78F00810B50 /* Supporting Files */,
 				2540C2E719C1954F0058D41F /* iPhoneStoryboard.storyboard */,
+				25DD95A719C1B7AE006D42D4 /* iPadStoryboard.storyboard */,
 				2540C2EA19C195CC0058D41F /* IHRJiraTicketCollectionViewController.h */,
 				2540C2EB19C195CC0058D41F /* IHRJiraTicketCollectionViewController.m */,
 				2540C2ED19C19DD10058D41F /* IHRTicketCollectionTableViewCell.h */,
@@ -248,8 +254,10 @@
 			files = (
 				2540C2E619C1937D0058D41F /* ticketurljson in Resources */,
 				DB48BDCF19A7C78F00810B50 /* InfoPlist.strings in Resources */,
+				25DD95AC19C1BF69006D42D4 /* ReadMe.md in Resources */,
 				2540C2E919C1954F0058D41F /* iPhoneStoryboard.storyboard in Resources */,
 				DB48BDD719A7C78F00810B50 /* Images.xcassets in Resources */,
+				25DD95A919C1B7AE006D42D4 /* iPadStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +310,14 @@
 				2540C2E819C1954F0058D41F /* en */,
 			);
 			name = iPhoneStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		25DD95A719C1B7AE006D42D4 /* iPadStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				25DD95A819C1B7AE006D42D4 /* en */,
+			);
+			name = iPadStoryboard.storyboard;
 			sourceTree = "<group>";
 		};
 		DB48BDCD19A7C78F00810B50 /* InfoPlist.strings */ = {
@@ -403,7 +419,7 @@
 				INFOPLIST_FILE = "SimpleTicket/SimpleTicket-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -418,7 +434,7 @@
 				INFOPLIST_FILE = "SimpleTicket/SimpleTicket-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

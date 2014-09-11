@@ -44,7 +44,6 @@
     _ticketURLParseObject = [[IHRTicketURLS alloc] init];
     
     [_ticketURLParseObject loadTicketURLs];
-    
 }
 
 - (void)didReceiveMemoryWarning

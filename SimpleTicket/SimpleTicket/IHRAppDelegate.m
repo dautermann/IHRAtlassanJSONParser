@@ -8,8 +8,6 @@
 
 #import "IHRAppDelegate.h"
 
-#import "IHRTicketURLS.h"
-
 @implementation IHRAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions

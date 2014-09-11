@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="42I-3b-GlS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="42I-3b-GlS">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Tj3-3L-wAl">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Tj3-3L-wAl">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -27,6 +27,12 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Tj3-3L-wAl" secondAttribute="trailing" id="BpB-cQ-xOd"/>
+                            <constraint firstItem="Tj3-3L-wAl" firstAttribute="top" secondItem="kmF-XC-GY1" secondAttribute="top" id="CaY-Jx-JXX"/>
+                            <constraint firstItem="Tj3-3L-wAl" firstAttribute="leading" secondItem="kmF-XC-GY1" secondAttribute="leading" id="ZIw-0p-M0u"/>
+                            <constraint firstItem="3Dh-wD-SAA" firstAttribute="top" secondItem="Tj3-3L-wAl" secondAttribute="bottom" id="t92-Pg-u6I"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ML5-8Z-eE7"/>
                     <connections>
@@ -48,9 +54,27 @@
                     <view key="view" contentMode="scaleToFill" id="JZv-5P-ild">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QxY-Fd-ryh">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="QxY-Fd-ryh" secondAttribute="trailing" id="2Uu-zg-0cu"/>
+                            <constraint firstItem="QxY-Fd-ryh" firstAttribute="leading" secondItem="JZv-5P-ild" secondAttribute="leading" id="6vx-Kf-Q6r"/>
+                            <constraint firstItem="QxY-Fd-ryh" firstAttribute="top" secondItem="JZv-5P-ild" secondAttribute="top" id="DBr-i8-4vR"/>
+                            <constraint firstItem="Hoo-F7-7Yz" firstAttribute="top" secondItem="QxY-Fd-ryh" secondAttribute="bottom" id="jjj-Kc-gmz"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Uag-uS-dWQ"/>
+                    <connections>
+                        <outlet property="detailTextView" destination="QxY-Fd-ryh" id="hfJ-5F-o29"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NGQ-4N-zDJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

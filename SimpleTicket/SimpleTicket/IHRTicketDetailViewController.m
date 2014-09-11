@@ -10,32 +10,55 @@
 
 @interface IHRTicketDetailViewController ()
 
+@property (weak) IBOutlet UITextView *detailTextView;
+
 @end
 
 @implementation IHRTicketDetailViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
+    if(self.ticketURL)
+    {
+        NSURLRequest *ticketDataRequest = [[NSURLRequest alloc] initWithURL:self.ticketURL];
+        if(ticketDataRequest)
+        {
+            [NSURLConnection sendAsynchronousRequest:ticketDataRequest queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+                if([data length] > 0 && !connectionError)
+                {
+                    NSError *error;
+                    NSDictionary *ticketDetailDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+                    if(ticketDetailDictionary)
+                    {
+                        NSMutableString *detailText = [[NSMutableString alloc] initWithCapacity:256]; // 256 is a wild guess...
+                        for(NSString *aKey in [ticketDetailDictionary allKeys])
+                        {
+                            id aValue = [ticketDetailDictionary objectForKey:aKey];
+                            [detailText appendFormat:@"%@ : %@\n", aKey, [aValue description]];
+                        }
+                        
+                        self.detailTextView.text = detailText;
+                    }
+                    else
+                    {
+                        NSLog(@"unable to parse json data from %@ - %@", [[ticketDataRequest URL] absoluteString], [connectionError localizedDescription]);
+                    }
+                }
+                else
+                {
+                    if(connectionError)
+                    {
+                        NSLog(@"error while trying to download from %@ - %@", [[ticketDataRequest URL] absoluteString], [connectionError localizedDescription]);
+                    }
+                    else
+                    {
+                        NSLog(@"no data downloaded for %@", [[ticketDataRequest URL] absoluteString]);
+                    }
+                }
+            }];
+        }
+    }
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
-    NSLog(@"url is %@", [self.ticketURL absoluteString]);
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-        
-    NSLog(@"viewWillAppear url is %@", [self.ticketURL absoluteString]);
 }
 
 - (void)didReceiveMemoryWarning

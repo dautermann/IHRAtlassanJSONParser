@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13D65" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="OjY-au-Pva">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--Jira Ticket Collection View Controller-->
+        <scene sceneID="WEp-qn-1DG">
+            <objects>
+                <viewController id="6VG-gg-XlA" customClass="IHRJiraTicketCollectionViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ihu-kP-GAH"/>
+                        <viewControllerLayoutGuide type="bottom" id="PC5-hd-Bvw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9F8-ZG-AOq">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ulv-Yv-xTH">
+                                <rect key="frame" x="0.0" y="65" width="768" height="959"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="6VG-gg-XlA" id="LQU-Es-mr8"/>
+                                    <outlet property="delegate" destination="6VG-gg-XlA" id="ko8-f6-xEF"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="ulv-Yv-xTH" secondAttribute="bottom" id="E3h-di-HqR"/>
+                            <constraint firstItem="ulv-Yv-xTH" firstAttribute="top" secondItem="Ihu-kP-GAH" secondAttribute="bottom" constant="1" id="FdU-v8-H8X"/>
+                            <constraint firstItem="ulv-Yv-xTH" firstAttribute="leading" secondItem="9F8-ZG-AOq" secondAttribute="leading" id="Mud-oE-3DM"/>
+                            <constraint firstAttribute="trailing" secondItem="ulv-Yv-xTH" secondAttribute="trailing" id="v6g-gZ-Frz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="yaL-uj-jY1"/>
+                    <connections>
+                        <segue destination="DcO-bM-CY4" kind="push" identifier="seeTicketDetail" id="Toh-pY-tlR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e1O-Ym-gbK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1721" y="-126"/>
+        </scene>
+        <!--Ticket Detail View Controller-->
+        <scene sceneID="Dai-xc-La0">
+            <objects>
+                <viewController id="DcO-bM-CY4" customClass="IHRTicketDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GJc-Xl-C7Y"/>
+                        <viewControllerLayoutGuide type="bottom" id="hMT-DP-8cg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gwP-B4-BIZ">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FXu-Pt-8Aa">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hMT-DP-8cg" firstAttribute="top" secondItem="FXu-Pt-8Aa" secondAttribute="bottom" id="JSA-o7-x2P"/>
+                            <constraint firstAttribute="trailing" secondItem="FXu-Pt-8Aa" secondAttribute="trailing" id="SHz-8n-9Fa"/>
+                            <constraint firstItem="FXu-Pt-8Aa" firstAttribute="top" secondItem="gwP-B4-BIZ" secondAttribute="top" id="XLV-JE-ffa"/>
+                            <constraint firstItem="FXu-Pt-8Aa" firstAttribute="leading" secondItem="gwP-B4-BIZ" secondAttribute="leading" id="rOc-6z-kwB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="e6S-ZM-7cJ"/>
+                    <connections>
+                        <outlet property="detailTextView" destination="FXu-Pt-8Aa" id="JXM-c8-2nq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VCv-fk-CcR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2778" y="-126"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="GOf-Pa-JCY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OjY-au-Pva" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bhf-9o-RAk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6VG-gg-XlA" kind="relationship" relationship="rootViewController" id="Hxf-0E-HO7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G6D-7s-0Dc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="287" y="-126"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>

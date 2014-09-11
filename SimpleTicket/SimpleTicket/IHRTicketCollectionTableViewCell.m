@@ -13,12 +13,15 @@
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
-    [super setSelected:selected animated:animated];
-
-    if(selected)
+    if(self.selected != selected)
     {
-        // segue to the detail view, sending along myself to get the detail
-        [self.parentVC performSegueWithIdentifier:@"seeTicketDetail" sender:self];
+        [super setSelected:selected animated:animated];
+
+        if(selected)
+        {
+            // segue to the detail view, sending along myself to get the detail
+            [self.parentVC performSegueWithIdentifier:@"seeTicketDetail" sender:self];
+        }
     }
 }
 
