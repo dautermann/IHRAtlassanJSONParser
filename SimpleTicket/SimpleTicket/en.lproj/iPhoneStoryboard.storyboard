@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="42I-3b-GlS">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--Jira Ticket Collection View Controller-->
+        <scene sceneID="QXA-0X-RDF">
+            <objects>
+                <viewController id="L4A-b9-21x" customClass="IHRJiraTicketCollectionViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="j1s-UA-BOA"/>
+                        <viewControllerLayoutGuide type="bottom" id="3Dh-wD-SAA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kmF-XC-GY1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Tj3-3L-wAl">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="L4A-b9-21x" id="s2a-Ex-St1"/>
+                                    <outlet property="delegate" destination="L4A-b9-21x" id="eT5-US-J53"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ML5-8Z-eE7"/>
+                    <connections>
+                        <segue destination="7nQ-iH-Lt5" kind="push" identifier="seeTicketDetail" id="Y9l-K7-zPN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ldR-S6-y9q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="813" y="-126"/>
+        </scene>
+        <!--Ticket Detail View Controller-->
+        <scene sceneID="Xyc-os-cMl">
+            <objects>
+                <viewController id="7nQ-iH-Lt5" customClass="IHRTicketDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vQm-Py-ojY"/>
+                        <viewControllerLayoutGuide type="bottom" id="Hoo-F7-7Yz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JZv-5P-ild">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Uag-uS-dWQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NGQ-4N-zDJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1294" y="-126"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Hwf-2l-ylB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="42I-3b-GlS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nhH-dV-cgN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="L4A-b9-21x" kind="relationship" relationship="rootViewController" id="N5u-Mc-Hnp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dAw-gO-hmw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="287" y="-126"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
