@@ -21,6 +21,9 @@
         {
             // segue to the detail view, sending along myself to get the detail
             [self.parentVC performSegueWithIdentifier:@"seeTicketDetail" sender:self];
+            
+            // de-select the cell in case we return to this screen
+            [super setSelected:false animated:NO];
         }
     }
 }

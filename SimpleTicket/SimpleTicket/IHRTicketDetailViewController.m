@@ -20,6 +20,9 @@
 {
     if(self.ticketURL)
     {
+        // set the title bar
+        self.navigationItem.title = [self.ticketURL lastPathComponent];
+        
         NSURLRequest *ticketDataRequest = [[NSURLRequest alloc] initWithURL:self.ticketURL];
         if(ticketDataRequest)
         {
